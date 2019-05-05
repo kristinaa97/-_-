@@ -1,8 +1,7 @@
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
-
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 body {
     /* Местоположение фоновой картинки */
-    background-image: url(http://energobyt.ru/wp-content/uploads/2014/11/фон-для-сайта.jpg);
+    background-image: url(http://www.kartinki.me/pic/201208/2560x1440/kartinki.me-5977.jpg);
     /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */
     background-position: center center;
     /* Фон не повторяется */
@@ -14,28 +13,13 @@ body {
     /* Цвет фона, который будет отображаться при загрузке фоновой картинки*/
     background-color: #464646;
 }
-.nav {
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+.carousel-item img {
+    height: 300px;
+}
+.footer{
 
-}
-.carousel .item{
-    background: #333;
-    text-align: center;
-    height: 300px !important;
-    margin-top: 0;
-}
-.carousel h2{
-    color: #fff;
-    margin: 0;
-    padding-top: 50px;
-    font-size: 48px;
-}
-.carousel p{
-    color: #666;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-.carousel-inner {
-    margin-top: -20px;
 }
