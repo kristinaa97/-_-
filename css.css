@@ -13,13 +13,78 @@ body {
     /* Цвет фона, который будет отображаться при загрузке фоновой картинки*/
     background-color: #464646;
 }
+
 .fakeimg {
     height: 200px;
     background: #aaa;
+    background: url('nobg.png') repeat;
 }
 .carousel-item img {
     height: 300px;
 }
-.footer{
+/* фон модалки */
+.modal {
+    display: none; /* скрыто по умолчанию */
+    position: fixed; /* пребывание на месте */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* ширина */
+    height: 100%;/*ота */
+    overflow: auto; /* при необходимости включить прокрутку  */
+    background-color: rgb(0,0,0); /* резервный цвет */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
 
+/* содержание модалки */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% сверху и по центру*/
+    border: 1px solid #888;
+    width:90%; /* могло быть и больше в зависимости от экрана  */
+}
+
+/* кнопка закрытия */
+.close {
+    /* Расположите его в правом верхнем углу вне модели  */
+    position: fixed;
+    right: 25%;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Кнопка закрытия при наведении  */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Добавить Анимацию Масштабирования*/
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.footer {
+    background-color: rosybrown; /*Цвет фона*/
+    color: red;/*цвет букв*/
+    display: block;/*Устанавливаем как блок*/
+    height: 200px;/*Высота блока*/
+    left: 0;/*положение блока*/
+    position: absolute; /* Абсолютное позиционирование */
+    width: 100%;/*ширина*/
 }
