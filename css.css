@@ -22,45 +22,94 @@ body {
 .carousel-item img {
     height: 300px;
 }
+.bxod {
+
+}
 /* фон модалки */
-.modal {
-    display: none; /* скрыто по умолчанию */
-    position: fixed; /* пребывание на месте */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* ширина */
-    height: 100%;/*ота */
-    overflow: auto; /* при необходимости включить прокрутку  */
-    background-color: rgb(0,0,0); /* резервный цвет */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
+.decor {
+    position: relative;
+    max-width: 400px;
+    margin: 50px auto 0;
+    background: white;
+    border-radius: 30px;
 }
-
-/* содержание модалки */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% сверху и по центру*/
-    border: 1px solid #888;
-    width:90%; /* могло быть и больше в зависимости от экрана  */
+.form-left-decoration,
+.form-right-decoration {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: #f69a73;
+    border-radius: 20px;
 }
-
-/* кнопка закрытия */
-.close {
-    /* Расположите его в правом верхнем углу вне модели  */
-    position: fixed;
-    right: 25%;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
+.form-left-decoration {
+    bottom: 60px;
+    left: -30px;
 }
-
-/* Кнопка закрытия при наведении  */
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
+.form-right-decoration {
+    top: 60px;
+    right: -30px;
+}
+.form-left-decoration:before,
+.form-left-decoration:after,
+.form-right-decoration:before,
+.form-right-decoration:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    border-radius: 30px;
+    background: white;
+}
+.form-left-decoration:before {top: -20px;}
+.form-left-decoration:after {
+    top: 20px;
+    left: 10px;
+}
+.form-right-decoration:before {
+    top: -20px;
+    right: 0;
+}
+.form-right-decoration:after {
+    top: 20px;
+    right: 10px;
+}
+.circle {
+    position: absolute;
+    bottom: 80px;
+    left: -55px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+}
+.form-inner {padding: 50px;}
+.form-inner input,
+.form-inner textarea {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.form-inner input[type="submit"] {
+    margin-top: 30px;
+    background: #f69a73;
+    border-bottom: 4px solid #d87d56;
+    color: white;
+    font-size: 14px;
+}
+.form-inner textarea {resize: none;}
+.form-inner h3 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #707981;
 }
 
 /* Добавить Анимацию Масштабирования*/
@@ -68,6 +117,26 @@ body {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
 }
+
+a.nav-khop {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    transition: .15s ease-in-out;
+}
+a.nav-khop:hover {
+    box-shadow: 0 0 10px 0 #F137A6 inset, 0 0 10px 4px #F137A6;
+    color: #F137A6;
+}
+
 
 @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)}
